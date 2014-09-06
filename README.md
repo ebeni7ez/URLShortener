@@ -1,8 +1,10 @@
-=== Clone the Project ===
+Clone the Project
+======================
 
 $ git clone https://github.com/ebeni7ez/URLShortener
 
-=== Set the environment ===
+Set the environment
+======================
 
 Install virtualenvwrapper. 
 
@@ -14,24 +16,28 @@ $ mkvirtualenv urlshort
 
 $ workon urlshort
 
-=== Install the requirements ===
+Install the requirements
+======================
 
 $ cd URLShortener
 $ pip install -r requirements.txt
 
-=== Install the requirements ===
+
+Run in your local server and access
+======================
 
 $ cd urlshortener
-$ python manage.py syncdb
-$ python manage.py migrate
 
-=== Run in your local server and access ===
+$ python manage.py syncdb
+
+$ python manage.py migrate
 
 $ python manage.py runserver
 
 Go to your browser and visit http://localhost:8000
 
-===Run the tests===
+Run the tests
+======================
 
 $ python manage.py test urls
 
