@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% block url_form %}
+    <div id="link_form">
+      {% include 'urls/linkform.html' %}
+    </div>
+    <div id="urls_box">
+      {% include 'urls/success.html' %}
+    </div>
+  {% endblock %}
+{% endblock content %}
