@@ -1,6 +1,3 @@
-URLShortener
-======================
-
 # Clone the Project
 
 $ git clone https://github.com/ebeni7ez/URLShortener
