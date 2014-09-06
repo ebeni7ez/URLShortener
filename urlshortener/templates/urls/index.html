@@ -5,7 +5,9 @@
       <h1> URL Shortener! </h1>
       <br>
       {% include 'urls/linkform.html' %}
-      {% include 'urls/success.html' %}
+      <div id="urls_box" align=left>
+        {% include 'urls/success.html' %}
+      </div>
     </div>
   {% endblock %}
 {% endblock content %}
