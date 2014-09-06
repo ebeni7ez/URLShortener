@@ -21,7 +21,7 @@ class Link(models.Model):
         get_latest_by = 'date_submitted'
 
     @staticmethod
-    def short(link):        
+    def short(link):
         return link.word.key
 
     @staticmethod
@@ -30,9 +30,9 @@ class Link(models.Model):
             word = Word.objects.get(key=short_url)
             link = Link.objects.get(word=word)
             return link.url
-        except ObjectDoesNotExist as e:
+        except ObjectDoesNotExist:
             raise Http404
 
     def get_absolute_url(self, request):
-        return request.build_absolute_uri(self.word.key) 
+        return request.build_absolute_uri(self.word.key)
 

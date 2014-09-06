@@ -5,11 +5,11 @@ from django.utils import timezone
 import random
 import string
 
+
 class ShortenedURL(TestCase):
-    def setUp(self):        
+    def setUp(self):
         word = Word(key="python",used=False)
         word.save()
-        
         url = "http://python.org/"
         date_submitted = timezone.now()
         link = Link(url=url, word=word, date_submitted=date_submitted)
@@ -23,7 +23,7 @@ class ShortenedURL(TestCase):
         url = "http://python.org/"
         link = Link.objects.get(url=url)
         short_url = Link.short(link)
-        self.assertLess(len(short_url), len(url))        
+        self.assertLess(len(short_url), len(url))
 
     def test_expand_url(self):
         """
@@ -33,9 +33,9 @@ class ShortenedURL(TestCase):
         url = "http://python.org/"
         link = Link.objects.get(url=url)
         short_url = Link.short(link)
-        
+
         # the short url is expanded when accessed
-        redirect_url = Link.expand_url(short_url)        
+        redirect_url = Link.expand_url(short_url)
         self.assertEqual(url, redirect_url)
 
     def test_redirect_to_original_site(self):
@@ -53,7 +53,6 @@ class ShortenedURL(TestCase):
                                        kwargs={"short_url": short_url}))
         self.assertRedirects(response, url)
 
-
     def test_index_page(self):
         """
             Tests a index page exists
@@ -65,8 +64,8 @@ class ShortenedURL(TestCase):
 
     def test_submit_form_word_not_list(self):
         """
-            Test that the submitting form return
-            the short url
+            Test that the submitting form
+            returns the short url
         """
         word = Word(key="word",used=False)
         word.save()
