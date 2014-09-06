@@ -1,7 +1,7 @@
 {% if form %}
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="Shorten" />
+  {{ form.as_table }}
+  <input align=right type="submit" value="Short" />
 </form>
 {% endif %}

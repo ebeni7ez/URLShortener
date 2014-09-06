@@ -1,11 +1,10 @@
 {% extends "base.html" %}
-
 {% block content %}
-  {% block url_form %}
-    <div id="link_form">
+  {% block url_form %}    
+    <div id="content_url" align=center>
+      <h1> URL Shortener! </h1>
+      <br>
       {% include 'urls/linkform.html' %}
-    </div>
-    <div id="urls_box">
       {% include 'urls/success.html' %}
     </div>
   {% endblock %}
