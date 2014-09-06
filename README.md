@@ -12,26 +12,28 @@ $ source /usr/local/bin/virtualenvwrapper.sh
 
 $ mkvirtualenv urlshort
 
-workon urlshort
+$ workon urlshort
 
 === Install the requirements ===
 
+$ cd URLShortener
 $ pip install -r requirements.txt
 
 === Install the requirements ===
 
-$ ./manage.py syncdb
-$ ./manage.py migrate
+$ cd urlshortener
+$ python manage.py syncdb
+$ python manage.py migrate
 
 === Run in your local server and access ===
 
-$ ./manage.py runserver
+$ python manage.py runserver
 
 Go to your browser and visit http://localhost:8000
 
 ===Run the tests===
 
-$ ./manage.py test urls
+$ python manage.py test urls
 
 
 
