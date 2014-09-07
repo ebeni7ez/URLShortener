@@ -10,7 +10,10 @@ body{
 }
 
 #urls_box{
-  padding-left: 100px;;
+  padding-left: 100px;
 }
 
+.errorlist {
+  font-size: 0.7em;
+}
 
