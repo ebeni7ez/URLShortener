@@ -1,7 +1,11 @@
 {% if form %}
 <form method="post">
   {% csrf_token %}
-  {{ form.as_table }}
-  <input align=right type="submit" value="Short" />
+  <div class="fieldWrapper">    
+    <label for="id_url">Insert your URL:</label>
+    {{ form.url }}
+    <input align=right type="submit" value="Short" />
+  </div>  
+  {{ form.url.errors }}
 </form>
 {% endif %}
