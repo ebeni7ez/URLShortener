@@ -70,7 +70,7 @@ def create_link(url):
         link = Link(url=url, word=word)
         link.save()
     else:
-        # If all the word in the database has been used already,
+        # If all the words in the database have been used already,
         # look for the oldest link that has been shortened
         # and replace it
         link = Link.objects.all().order_by('date_submitted')[0]
