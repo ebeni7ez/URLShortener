@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
   {% block url_form %}    
-    <div id="content_url" align=center>
+    <nav class="navbar navbar-inverse" role="navigation">
+    </nav>
+    <div class="page-header col-sm-offset-3 col-sm-6">
       <h1> URL Shortener! </h1>
-      <br>
-      {% include 'urls/linkform.html' %}
-      <div id="urls_box" align=left>
-        {% include 'urls/success.html' %}
-      </div>
+    </div>
+   
+    <br>
+    {% include 'urls/linkform.html' %}
+    {% include 'urls/success.html' %}
+    <div class="butters">
+      <img src="{{ STATIC_URL }}img/butters.png"/>
     </div>
   {% endblock %}
 {% endblock content %}

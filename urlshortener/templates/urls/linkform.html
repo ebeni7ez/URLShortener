@@ -1,11 +1,20 @@
+
 {% if form %}
-<form method="post">
+<form class="col-sm-12 form-horizontal" method="post" role="form">
   {% csrf_token %}
-  <div class="fieldWrapper">    
-    <label for="id_url">Insert your URL:</label>
-    {{ form.url }}
-    <input align=right type="submit" value="Short" />
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-6 control-label">Insert your URL: </label>
+    <div class="col-sm-6">
+      {{ form.url }}
+    </div>
   </div>  
-  {{ form.url.errors }}
+  <div class="form-group">
+    <div class="col-sm-offset-6  col-sm-6">
+      <button type="submit" class="btn btn-default">Short!</button>
+    </div>
+  </div>
+  <div class="alert alert-warning col-sm-offset-4 col-sm-4" role="alert">
+    {{ form.url.errors }}
+  </div>
 </form>
 {% endif %}
