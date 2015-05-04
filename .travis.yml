@@ -7,5 +7,4 @@ install:
   - pip install -r requirements.txt
 script:
   - cd urlshortener
-  - python manage.py test
-
+  - python setup.py test
