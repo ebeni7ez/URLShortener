@@ -4,4 +4,4 @@ dependencies:
 
 test:
     override:
-        - python urlshortener/manage.py test
+        - python urlshortener/manage.py test --settings=test_settings
