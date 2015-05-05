@@ -4,4 +4,4 @@ dependencies:
 
 test:
     override:
-        - fab test
+        - python manage.py test
