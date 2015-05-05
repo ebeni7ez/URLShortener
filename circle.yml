@@ -4,4 +4,4 @@ dependencies:
 
 test:
     override:
-        - python manage.py test
+        - python urlshortener/manage.py testgit s
