@@ -102,7 +102,7 @@ class ShortenedURL(TestCase):
         """
             Test when submitting multiple links
         """
-        TIMES = 30000
+        TIMES = 1000 #30000
         for i in xrange(TIMES):
             uri = "".join(random.sample(string.ascii_letters, 10))
             url = "http://mydomain.com/{}/".format(i, uri)
